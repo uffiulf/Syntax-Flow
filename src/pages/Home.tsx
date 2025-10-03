@@ -25,7 +25,7 @@ const Home = () => {
     <div className="space-y-16">
       <Hero />
       {/* Search and Filter */}
-      <section aria-labelledby="search-filter-heading">
+      <section aria-labelledby="search-filter-heading" className="py-20">
         <h2 id="search-filter-heading" className="sr-only">{t("filters.search")}</h2>
         <div className="mx-auto max-w-xl">
           <SearchBar />
@@ -34,7 +34,7 @@ const Home = () => {
       </section>
 
       {/* Featured Projects */}
-      <section aria-labelledby="featured-heading">
+      <section aria-labelledby="featured-heading" className="py-20">
         <h2 id="featured-heading" className="text-2xl font-bold">{t("sections.featuredProjects")}</h2>
         <Carousel>
           {featuredProjects.map((project, idx) => (
@@ -46,9 +46,9 @@ const Home = () => {
       </section>
 
       {/* Team Preview */}
-      <section aria-labelledby="team-preview-heading">
+      <section aria-labelledby="team-preview-heading" className="py-20">
         <h2 id="team-preview-heading" className="text-2xl font-bold">{t("sections.teamPreview")}</h2>
-        <div className="mt-4 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-4 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {team.slice(0, 4).map((member, idx) => (
             <Reveal key={member.slug} index={idx}>
               <TeamCard member={member} />
@@ -58,9 +58,9 @@ const Home = () => {
       </section>
 
       {/* What We Offer */}
-      <section aria-labelledby="offerings-heading">
-        <h2 id="offerings-heading" className="text-2xl font-bold text-center">{t("sections.whatWeOffer")}</h2>
-        <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">
+      <section aria-labelledby="offerings-heading" className="py-20">
+        <h2 id="offerings-heading" className="text-2xl font-bold">{t("sections.whatWeOffer")}</h2>
+        <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="font-semibold">{t("offerings.development")}</h3>
           </div>

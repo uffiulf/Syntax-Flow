@@ -16,33 +16,40 @@ const Projects = () => {
   }, [t]);
 
   return (
-    <div className="space-y-8">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-          {t("nav.projects")}
-        </h1>
-        <p className="mt-4 text-lg text-muted-foreground">
-          {t("hero.pitch")}
-        </p>
-      </div>
-
-      <div className="mx-auto max-w-xl">
-        <SearchBar />
-        <TagFilter />
-      </div>
-
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {filteredProjects.map((project, idx) => (
-          <Reveal key={project.slug} index={idx}>
-            <ProjectCard project={project} />
-          </Reveal>
-        ))}
-        {filteredProjects.length === 0 && (
-          <p className="text-center text-muted-foreground col-span-full">
-            {t("noResults")}
+    <div className="space-y-16">
+      <section className="py-20">
+        <div>
+          <h1 className="text-left text-5xl font-extrabold tracking-tight md:text-7xl">
+            {t("nav.projects")}
+          </h1>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl">
+            {t("hero.pitch")}
           </p>
-        )}
-      </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="mx-auto max-w-xl">
+          <SearchBar />
+          <TagFilter />
+        </div>
+      </section>
+
+      <section className="py-20">
+        <h2 className="text-2xl font-bold">{t("nav.projects")}</h2>
+        <div className="mt-4 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {filteredProjects.map((project, idx) => (
+            <Reveal key={project.slug} index={idx}>
+              <ProjectCard project={project} />
+            </Reveal>
+          ))}
+          {filteredProjects.length === 0 && (
+            <p className="text-muted-foreground col-span-full">
+              {t("noResults")}
+            </p>
+          )}
+        </div>
+      </section>
     </div>
   );
 };

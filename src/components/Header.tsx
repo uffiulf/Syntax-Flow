@@ -27,7 +27,7 @@ const Header = () => {
         <div className="absolute inset-x-0 -top-1 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/20 to-transparent" />
       </div>
-      <div className="relative container flex h-14 max-w-screen-2xl items-center">
+      <div className="relative mx-auto max-w-7xl px-6 flex h-14 items-center">
         <Link to="/" className="mr-6 flex items-center space-x-2">
           <span className="font-bold sm:inline-block bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent">TeamPortfolio</span>
         </Link>

@@ -13,10 +13,10 @@ const Hero = () => {
         <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-fuchsia-400/20 blur-3xl" />
         <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-violet-400/20 blur-3xl" />
       </div>
-      <div className="relative mx-auto flex max-w-4xl flex-col items-center text-center">
+      <div className="relative mx-auto max-w-7xl">
         <h1
           id="hero-heading"
-          className="text-balance text-4xl font-extrabold tracking-tight text-white drop-shadow-sm md:text-5xl lg:text-6xl"
+          className="text-left text-5xl font-extrabold tracking-tight text-white drop-shadow-sm md:text-7xl"
         >
           <span className="bg-gradient-to-r from-white via-violet-100 to-fuchsia-100 bg-clip-text text-transparent">
             {t('hero.title')}
@@ -25,7 +25,7 @@ const Hero = () => {
         <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-violet-100 md:text-xl">
           {t('hero.pitch')}
         </p>
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
+        <div className="mt-10 flex flex-wrap gap-4">
           <Button size="lg" asChild>
             <Link to="/team">{t('cta.viewTeam')}</Link>
           </Button>
@@ -39,4 +39,3 @@ const Hero = () => {
 }
 
 export default Hero
-
