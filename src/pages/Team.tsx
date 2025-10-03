@@ -6,6 +6,7 @@ import TeamCard from "@/components/TeamCard";
 import SearchBar from "@/components/SearchBar";
 import RoleFilter from "@/components/RoleFilter";
 import SkillsFilter from "@/components/SkillsFilter";
+import Reveal from "@/components/Reveal";
 
 const Team = () => {
   const { t } = useTranslation("common");
@@ -33,8 +34,10 @@ const Team = () => {
       </div>
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {filteredTeam.map((member) => (
-          <TeamCard key={member.slug} member={member} />
+        {filteredTeam.map((member, idx) => (
+          <Reveal key={member.slug} index={idx}>
+            <TeamCard member={member} />
+          </Reveal>
         ))}
         {filteredTeam.length === 0 && (
           <p className="text-center text-muted-foreground col-span-full">

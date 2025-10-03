@@ -9,6 +9,7 @@ import ProjectCard from "@/components/ProjectCard";
 import TeamCard from "@/components/TeamCard";
 import Carousel from "@/components/Carousel";
 import Hero from "@/components/Hero";
+import Reveal from "@/components/Reveal";
 
 const Home = () => {
   const { t } = useTranslation("common");
@@ -36,8 +37,10 @@ const Home = () => {
       <section aria-labelledby="featured-heading">
         <h2 id="featured-heading" className="text-2xl font-bold">{t("sections.featuredProjects")}</h2>
         <Carousel>
-          {featuredProjects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+          {featuredProjects.map((project, idx) => (
+            <Reveal key={project.slug} index={idx}>
+              <ProjectCard project={project} />
+            </Reveal>
           ))}
         </Carousel>
       </section>
@@ -46,8 +49,10 @@ const Home = () => {
       <section aria-labelledby="team-preview-heading">
         <h2 id="team-preview-heading" className="text-2xl font-bold">{t("sections.teamPreview")}</h2>
         <div className="mt-4 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {team.slice(0, 4).map((member) => (
-            <TeamCard key={member.slug} member={member} />
+          {team.slice(0, 4).map((member, idx) => (
+            <Reveal key={member.slug} index={idx}>
+              <TeamCard member={member} />
+            </Reveal>
           ))}
         </div>
       </section>

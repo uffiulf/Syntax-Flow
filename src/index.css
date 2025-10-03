@@ -177,3 +177,10 @@
   .gradient-hero-bg { @apply bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 dark:from-violet-700 dark:via-purple-700 dark:to-fuchsia-700; }
   .text-gradient { background: linear-gradient(90deg,var(--tw-gradient-from,#7c3aed),var(--tw-gradient-to,#a21caf)); -webkit-background-clip: text; color: transparent; }
 }
+
+/* Stagger animation utilities */
+@layer utilities {
+  @keyframes fade-slide-up { from { opacity:0; transform: translateY(12px) scale(.98); } to { opacity:1; transform:translateY(0) scale(1); } }
+  .animate-fade-slide-up { opacity:0; animation: fade-slide-up .6s cubic-bezier(.22,.8,.36,1) forwards; }
+}
+@media (prefers-reduced-motion: reduce) { .animate-fade-slide-up { animation: none; opacity:1; transform:none; } }
