@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "oplero",
+    "title": "Oplero",
+    "summary": "Lecture capture & engagement platform.",
+    "tags": ["React", "AI", "Education"],
+    "team": ["ola-nordmann", "kari-nordmann"],
+    "featured": true,
+    "thumb": "/images/projects/oplero.png",
+    "links": {
+      "repo": "https://github.com/org/oplero"
+    }
+  },
+  {
+    "slug": "project-b",
+    "title": "Project B",
+    "summary": "A super secret project.",
+    "tags": ["Stealth", "Innovation"],
+    "team": ["kari-nordmann"],
+    "featured": false,
+    "thumb": "/images/projects/project-b.png",
+    "links": {}
+  }
+]
