@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="relative mx-auto max-w-7xl">
         <h1
           id="hero-heading"
-          className="text-left text-5xl font-extrabold tracking-tight text-white drop-shadow-sm md:text-7xl"
+          className="text-left text-7xl font-extrabold tracking-tight text-white drop-shadow-sm"
         >
           <span className="bg-gradient-to-r from-white via-violet-100 to-fuchsia-100 bg-clip-text text-transparent">
             {t('hero.title')}
