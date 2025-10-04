@@ -1,15 +1,14 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import SearchBar from "@/components/SearchBar";
 import RoleFilter from "@/components/RoleFilter";
 import { getProjects, getTeam } from "@/lib/data";
 import ProjectCard from "@/components/ProjectCard";
 import TeamCard from "@/components/TeamCard";
-import Carousel from "@/components/Carousel";
+import { Carousel as EmblaCarousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
+import Offerings from "@/components/Offerings";
 
 const Home = () => {
   const { t } = useTranslation("common");
@@ -36,13 +35,19 @@ const Home = () => {
       {/* Featured Projects */}
       <section aria-labelledby="featured-heading" className="py-20">
         <h2 id="featured-heading" className="text-2xl font-bold">{t("sections.featuredProjects")}</h2>
-        <Carousel>
-          {featuredProjects.map((project, idx) => (
-            <Reveal key={project.slug} index={idx}>
-              <ProjectCard project={project} />
-            </Reveal>
-          ))}
-        </Carousel>
+        <EmblaCarousel className="mt-4" opts={{ align: "start" }}>
+          <CarouselContent>
+            {featuredProjects.map((project, idx) => (
+              <CarouselItem key={project.slug} className="md:basis-1/2 lg:basis-1/3">
+                <Reveal index={idx}>
+                  <ProjectCard project={project} />
+                </Reveal>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </EmblaCarousel>
       </section>
 
       {/* Team Preview */}
@@ -60,19 +65,8 @@ const Home = () => {
       {/* What We Offer */}
       <section aria-labelledby="offerings-heading" className="py-20">
         <h2 id="offerings-heading" className="text-2xl font-bold">{t("sections.whatWeOffer")}</h2>
-        <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <h3 className="font-semibold">{t("offerings.development")}</h3>
-          </div>
-          <div>
-            <h3 className="font-semibold">{t("offerings.devops")}</h3>
-          </div>
-          <div>
-            <h3 className="font-semibold">{t("offerings.projectManagement")}</h3>
-          </div>
-            <div>
-            <h3 className="font-semibold">{t("offerings.design")}</h3>
-          </div>
+        <div className="mt-8">
+          <Offerings />
         </div>
       </section>
     </div>

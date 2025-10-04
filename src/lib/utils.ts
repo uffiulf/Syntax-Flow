@@ -19,3 +19,17 @@ export function setPageMeta(title: string, description?: string) {
     meta.content = description;
   }
 }
+
+export function buildSrcSet(baseSrc: string, widths: number[] = [400, 800]) {
+  try {
+    const dot = baseSrc.lastIndexOf(".");
+    if (dot <= 0) return undefined;
+    const name = baseSrc.slice(0, dot);
+    const ext = baseSrc.slice(dot);
+    return widths
+      .map((w) => `${name}-${w}w${ext} ${w}w`)
+      .join(", ");
+  } catch {
+    return undefined;
+  }
+}

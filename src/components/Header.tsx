@@ -18,6 +18,17 @@ const Header = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const preloadRoute = (path: string) => {
+    switch (path) {
+      case '/': import('@/pages/Home'); break;
+      case '/team': import('@/pages/Team'); break;
+      case '/projects': import('@/pages/Projects'); break;
+      case '/blog': import('@/pages/Blog'); break;
+      case '/contact': import('@/pages/Contact'); break;
+      default: break;
+    }
+  };
+
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full transition-colors duration-300",
@@ -34,27 +45,27 @@ const Header = () => {
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link to="/">
+              <Link to="/" onMouseEnter={() => preloadRoute('/') }>
                 <NavigationMenuLink className={cn(buttonVariants({ variant: "ghost" }), "hover:text-primary transition-colors")}> {t('home')} </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/team">
+              <Link to="/team" onMouseEnter={() => preloadRoute('/team') }>
                 <NavigationMenuLink className={cn(buttonVariants({ variant: "ghost" }), "hover:text-primary transition-colors")}> {t('team')} </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/projects">
+              <Link to="/projects" onMouseEnter={() => preloadRoute('/projects') }>
                 <NavigationMenuLink className={cn(buttonVariants({ variant: "ghost" }), "hover:text-primary transition-colors")}> {t('projects')} </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/blog">
+              <Link to="/blog" onMouseEnter={() => preloadRoute('/blog') }>
                 <NavigationMenuLink className={cn(buttonVariants({ variant: "ghost" }), "hover:text-primary transition-colors")}> {t('blog')} </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/contact">
+              <Link to="/contact" onMouseEnter={() => preloadRoute('/contact') }>
                 <NavigationMenuLink className={cn(buttonVariants({ variant: "ghost" }), "hover:text-primary transition-colors")}> {t('contact')} </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
