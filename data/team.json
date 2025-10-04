@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "ola-nordmann",
+    "name": "Ola Nordmann",
+    "role": "Developer",
+    "roles": ["Developer"],
+    "skills": ["React", "DevOps", "Figma"],
+    "bio": "Full-stack with eye for UX.",
+    "email": "ola@example.com",
+    "location": "Halden, NO",
+    "links": {
+      "github": "https://github.com/ola",
+      "linkedin": "https://linkedin.com/in/ola"
+    },
+    "avatar": "/images/team/ola.jpg",
+    "cvUrl": "/cv/ola.pdf",
+    "highlights": ["Led Project A", "Optimized CI/CD by 40%"]
+  },
+  {
+    "slug": "kari-nordmann",
+    "name": "Kari Nordmann",
+    "role": "Designer",
+    "roles": ["Designer"],
+    "skills": ["Figma", "UX Research", "Branding"],
+    "bio": "Creative designer with a passion for user-centered design.",
+    "email": "kari@example.com",
+    "location": "Fredrikstad, NO",
+    "links": {
+      "linkedin": "https://linkedin.com/in/kari"
+    },
+    "avatar": "/images/team/kari.jpg",
+    "cvUrl": "/cv/kari.pdf",
+    "highlights": ["Designed the Oplero brand", "Led user research for Project B"]
+  }
+]

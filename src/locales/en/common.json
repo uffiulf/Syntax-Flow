@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Home",
+    "team": "Team",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "We build, ship and design together.",
+    "pitch": "Developers, DevOps, PMs and Designers showcasing work and CVs."
+  },
+  "cta": {
+    "viewTeam": "View Team",
+    "contact": "Contact us"
+  },
+  "filters": {
+    "search": "Search",
+    "role": "Role",
+    "skills": "Skills",
+    "roles": {
+      "Developer": "Developer",
+      "DevOps": "DevOps",
+      "Project Manager": "Project Manager",
+      "Designer": "Designer"
+    },
+    "tags": "Tags",
+    "all": "All"
+  },
+  "sections": {
+    "featuredProjects": "Featured Projects",
+    "teamPreview": "Meet the Team",
+    "whatWeOffer": "What We Offer"
+  },
+  "offerings": {
+    "development": "Development",
+    "devops": "DevOps",
+    "projectManagement": "Project Management",
+    "design": "Design"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "profile": {
+    "highlights": "Highlights",
+    "skills": "Skills",
+    "links": "Links",
+    "cv": "CV",
+    "relatedProjects": "Related Projects"
+  },
+  "project": {
+    "about": "About the project",
+    "tags": "Tags",
+    "team": "Team",
+    "links": "Links"
+  },
+  "buttons": {
+    "viewProfile": "View Profile",
+    "downloadCv": "Download CV",
+    "viewProject": "View Project",
+    "repo": "Repository",
+    "liveDemo": "Live Demo"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "The page you are looking for does not exist."
+  },
+  "goHome": "Go to homepage",
+  "noResults": "No results",
+  "search_placeholder": "Search team and projects...",
+  "role_filter_all": "All",
+  "view_profile": "View Profile",
+  "download_cv": "Download CV",
+  "featured_projects": "Featured Projects",
+  "team_preview": "Meet the Team",
+  "what_we_offer": "What We Offer",
+  "development": "Development",
+  "devops": "DevOps",
+  "project_management": "Project Management",
+  "design": "Design",
+  "view_team": "View Team",
+  "contact_us": "Contact Us",
+  "home": "Home",
+  "team": "Team",
+  "projects": "Projects",
+  "blog": "Blog",
+  "contact": "Contact"
+}
